@@ -6,12 +6,28 @@ using System.Text.Json;
 using Validator;
 using WebApi.Models;
 
- namespace WebCRUDMVCSQL.Controllers
+ namespace dotnet_mvc.Controllers
  {
      public class userController : Controller
      {
+
+        public IActionResult namePage()//View cadastro de nome.
+        {
+            return View();
+        }
+
+        public IActionResult companyPage()//View cadastro do nome da empresa.
+        {
+            return View();
+        }
+
+        public IActionResult documentPage()//View cadastro do documento.
+        {
+            return View();
+        }
+        
         [HttpPost]
-        public ActionResult saveUser(User user)
+        public IActionResult saveUser(User user)
         {
             using (var pgsql = new npgsqlCon())//Utilizar o banco de dados.
             if (ModelState.IsValid)
@@ -20,7 +36,7 @@ using WebApi.Models;
                 pgsql.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(user);
+            return Redirect("/Home/Index");
         }
     }
 }
