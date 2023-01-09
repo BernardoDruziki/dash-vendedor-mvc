@@ -50,3 +50,8 @@ C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Npgsql.EntityF
 C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\DevOne.Security.Cryptography.BCrypt.dll
 C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\dotnet-mvc.MvcApplicationPartsAssemblyInfo.cs

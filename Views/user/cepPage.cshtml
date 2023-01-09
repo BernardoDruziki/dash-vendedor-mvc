@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/register.css">
+  <title>Cadastro!</title>
+</head>
+<body>
+  <a href="@Url.Action("passwordPage", "user")" class="arrowButton">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+    </svg>
+  </a>
+  <h1 class="nameTextPass">Nos informe sua localização.</h1>
+    @Html.TextBox("cep", null, new {placeholder = "CEP", @class = "cepBox", id="buscarCep"})
+<form action="" id="login-form">
+    @Html.TextBox("Estado", null, new {placeholder = "Estado", @class = "input-text-desc"})
+
+    @Html.TextBox("Cidade", null, new {placeholder = "Cidade", @class = "input-text-desc"})
+
+    @Html.TextBox("Bairro", null, new {placeholder = "Bairro", @class = "input-text-desc"})
+
+    @Html.TextBox("Rua", null, new {placeholder = "Rua", @class = "input-text-desc"})
+
+    @Html.TextBox("Num", null, new {placeholder = "Número da residência", @class = "input-text-desc"})
+    
+    @Html.TextBox("Comp", null, new {placeholder = "Complemento", @class = "input-text-desc"})
+
+    <button type="submit" class="buttonContinuePass">Continuar</button>
+</form>
+</body>
+</html>

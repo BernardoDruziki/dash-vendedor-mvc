@@ -25,18 +25,22 @@ using WebApi.Models;
         {
             return View();
         }
-        
-        [HttpPost]
-        public IActionResult saveUser(User user)
+
+        public IActionResult phonePage()//View cadastro do telefone.
         {
-            using (var pgsql = new npgsqlCon())//Utilizar o banco de dados.
-            if (ModelState.IsValid)
-            {
-                pgsql.Users.Add(user);
-                pgsql.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return Redirect("/Home/Index");
+            return View();
+        }
+        public IActionResult emailPage()//View cadastro do email.
+        {
+            return View();
+        }
+         public IActionResult passwordPage()//View cadastro da senha.
+        {
+            return View();
+        }
+        public IActionResult cepPage()//View cadastro do enfereço.
+        {
+            return View();
         }
     }
 }

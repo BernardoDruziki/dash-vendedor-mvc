@@ -7,18 +7,18 @@
   <title>Cadastro!</title>
 </head>
 <body>
-  <a href="@Url.Action("companyPage", "user")" class="arrowButton">
+  <a href="@Url.Action("phonePage", "user")" class="arrowButton">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left"
       viewBox="0 0 16 16">
       <path fill-rule="evenodd"
         d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
     </svg>
   </a>
-  <h1 class="nameText">Informe um cpf ou cnpj que gostaria de usar.</h1>
+  <h1 class="nameTextEmail">Digite um email para acessar sua conta.</h1>
   <form action="" id="login-form">
-    <label for="name" class="input-label-document">CPF ou CNPJ</label>
-    <input type="text" name="name" id="name" class="input-document" required>
-    <button type="submit" class="button" asp-controller="user" asp-action="phonePage">Continuar</button>
+    <label for="name" class="input-label-email">Email</label>
+    <input type="text" name="name" id="name" class="input-text-email" required>
+    <button type="submit" class="button" asp-controller="user" asp-action="passwordPage">Continuar</button>
   </form>
 </body>
 </html>

@@ -31,6 +31,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/user/cepPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjZXBQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/user/companyPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjb21wYW55UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -39,8 +43,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxkb2N1bWVudFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/user/emailPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxlbWFpbFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/user/namePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxuYW1lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/user/passwordPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxwYXNzd29yZFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/user/phonePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxwaG9uZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BernardoMiróDruziki/Desktop/dotnet-mvc/Views/_ViewImports.cshtml]
