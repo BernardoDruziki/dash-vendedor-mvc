@@ -2,12 +2,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace dotnet_mvc.Models;
 
-// [NotMapped]
-// public class UserFirstViewModel{
-//     [Display(Name="Nome Completo")]
-//     [Required]
-//     public string Nome { get; set; }
-// }
 [Table("Users")]
 [Serializable]//Permite a serialização.
 public class User{
@@ -19,8 +13,8 @@ public class User{
     public string? uuId { get; set; }
 //---------------------------------------------------------
     [Column("name")]
-    [Required (ErrorMessage = "Name Required")]
     [Display(Name="Nome Completo")]
+    [Required (ErrorMessage = "Name Required")]
     public string name { get; set; }
 //---------------------------------------------------------
     [Column("companyName")] 

@@ -2,6 +2,7 @@ using dotnet_mvc.Models;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using Validator;
 using WebApi.Models;
@@ -42,8 +43,48 @@ using WebApi.Models;
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> namePage(string name, [Bind("name")] User user)
+        {
+            if (name != user.name)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                using (var pgsql = new npgsqlCon())//Utilizar o banco de dados.
+                try
+                {
+                    user.uuId = Guid.NewGuid().ToString(user.uuId);//Gera o uuId do usuário.
+                    pgsql.Add(user);
+                    await pgsql.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserExists(user.name))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(companyPage));
+            }
+            return View(user);
+        }
+
+          private bool UserExists(string name)
+        {
+          using (var pgsql = new npgsqlCon())
+          return pgsql.Users.Any(e => e.name == name);
+        }
     }
 }
+
         //SALVAR USUÁRIO 
         // [HttpPost]
         // public static async Task<string> SaveUser([FromBody]User user)

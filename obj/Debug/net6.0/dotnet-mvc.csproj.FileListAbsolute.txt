@@ -55,3 +55,8 @@ C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Swashbuckle.As
 C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\dotnet-mvc.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\staticwebassets\msbuild.dotnet-mvc.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\staticwebassets\msbuild.build.dotnet-mvc.props
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.dotnet-mvc.props
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.dotnet-mvc.props
+C:\Users\BernardoMiróDruziki\Desktop\dotnet-mvc\obj\Debug\net6.0\staticwebassets.pack.json

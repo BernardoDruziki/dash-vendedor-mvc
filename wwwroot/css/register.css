@@ -20,7 +20,7 @@ body {
     font-family: 'Baloo';
     display: block;
     color: #a8a3a3;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 25px;
     align-items: center;
     width: 500px;
@@ -102,6 +102,7 @@ body {
     margin-top: 25px;
     align-items: center;
     width: 700px;
+    font-size: 15px;
   }
 
   .arrowButton{
@@ -134,10 +135,10 @@ body {
     font-family: 'Baloo';
     display: block;
     color: #b6b6b6;
-    font-size: 14px;
     margin-top: 25px;
     align-items: center;
     width: 450px;
+    font-size: 15px;
   }
 
   .arrowButton{
@@ -154,7 +155,7 @@ body {
   font-family: 'Baloo';
   display: block;
   color: #b6b6b6;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 25px;
   align-items: center;
   width: 425px;
@@ -178,7 +179,7 @@ body {
   font-family: 'Baloo';
   display: block;
   color: #b6b6b6;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 25px;
   align-items: center;
   width: 400px;
@@ -215,7 +216,7 @@ body {
   font-family: 'Baloo';
   display: block;
   color: #b6b6b6;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 25px;
   align-items: center;
   width: 530px;
@@ -280,7 +281,7 @@ body {
   outline: none;
   font-family: 'Baloo';
   color: #333333;
-  font-size: 17px;
+  font-size: 15px;
   margin-top: 30px;
 }
 .cepBox{
@@ -293,4 +294,5 @@ body {
   display: block;
   width: 280px;
   margin-top: 20px;
+  font-size: 15px;
 }

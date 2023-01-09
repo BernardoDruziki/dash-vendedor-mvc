@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model User;
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,29 +10,35 @@
 <body>
   <main>
     <div class="container">
-      <form action="" id="login-form">
+      @using (Html.BeginForm())
+      {
         <img src="~/Images/flor.png" class="image" usemap="#image-map">
-        <label for="name" class="input-label">Email</label>
-        <input type="text" name="email" id="email" class="input-text">
-        <label for="email" class="input-label">Senha</label>
+        <div class="input-label">
+          @Html.LabelFor(model => model.email)
+          @Html.TextBoxFor(model => model.email, new {@class = "input-text"})
+        </div>
+        <div class="input-label">
+          @Html.LabelFor(model => model.password)
+        </div>
         <div class="input-group">
-          <input type="password" id="senha" name="senha" class="input-text">
-          <a onclick="mostrarSenha()" class="eyeButton"><svg xmlns="http://www.w3.org/2000/svg"
-              width="20" height="20" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+          @Html.PasswordFor(model => model.password, new {@class = "input-text", id="senha"})
+          <a onclick="mostrarSenha()" class="eyeButton"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+            fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
               <path
-                d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+              d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z" />
               <path
-                d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
-              </a>
+              d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z" />
+          </a>
         </div>
         <p><a href="cadastro" class="textPass">Esqueceu a senha?</a></p>
         <button type="submit" class="button">Entrar</button>
-        <p class="text">Não possuí uma conta?@Html.ActionLink("Cadastrar", "namePage", "user", null, new {@class = "text2"})</p>
-      </form>
+        <p class="text">Não possuí uma conta?@Html.ActionLink("Cadastrar", "namePage", "user", null, new {@class =
+        "text2"})</p>
+      }
       <map name="image-map">
         <area target="_self" alt="" title=""
-          href="https://cdn.ecvol.com/s/desenhargoku.e-com.club/uploads/goku-ss-blue.jpg"
-          coords="113,136,134,152" shape="rect">
+          href="https://cdn.ecvol.com/s/desenhargoku.e-com.club/uploads/goku-ss-blue.jpg" coords="113,136,134,152"
+          shape="rect">
       </map>
     </div>
   </main>
