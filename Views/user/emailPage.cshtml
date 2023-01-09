@@ -1,3 +1,4 @@
+@model User;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +16,13 @@
     </svg>
   </a>
   <h1 class="nameTextEmail">Digite um email para acessar sua conta.</h1>
-  <form action="" id="login-form">
-    <label for="name" class="input-label-email">Email</label>
-    <input type="text" name="name" id="name" class="input-text-email" required>
+    @using (Html.BeginForm())
+  {
+    <div class="input-label-email">
+      @Html.LabelFor(model => model.email)
+      @Html.TextBoxFor(model => model.email, new {@class = "input-text-email"})
+    </div>
     <button type="submit" class="button" asp-controller="user" asp-action="passwordPage">Continuar</button>
-  </form>
+  }
 </body>
 </html>

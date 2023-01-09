@@ -274,7 +274,6 @@ body {
   margin: 0 auto;
   border: none;
   border-bottom: 1px solid #b6b6b6;
-  font-size: 1rem;
   display: block;
   align-items: center;
   width: 530px;
@@ -293,4 +292,5 @@ body {
   margin: 0 auto;
   display: block;
   width: 280px;
+  margin-top: 20px;
 }

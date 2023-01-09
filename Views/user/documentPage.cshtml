@@ -1,3 +1,4 @@
+@model User;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +16,13 @@
     </svg>
   </a>
   <h1 class="nameText">Informe um cpf ou cnpj que gostaria de usar.</h1>
-  <form action="" id="login-form">
-    <label for="name" class="input-label-document">CPF ou CNPJ</label>
-    <input type="text" name="name" id="name" class="input-document" required>
+      @using (Html.BeginForm())
+  {
+    <div class="input-label-document">
+      @Html.LabelFor(model => model.cpf)
+      @Html.TextBoxFor(model => model.cpf, new {@class = "input-document"})
+    </div>
     <button type="submit" class="button" asp-controller="user" asp-action="phonePage">Continuar</button>
-  </form>
+  }
 </body>
 </html>

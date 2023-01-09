@@ -1,3 +1,4 @@
+@model User;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +16,13 @@
     </svg>
   </a>
   <h1 class="nameText">Digite o nome que você gostaria que fosse mostrado para seus clientes.</h1>
-  <form action="" id="login-form">
-    <label for="name" class="input-label-company">Seu nome de profissional, marca ou empresa</label>
-    <input type="text" name="name" id="name" class="input-company" required>
+    @using (Html.BeginForm())
+  {
+    <div class="input-label-company">
+      @Html.LabelFor(model => model.companyName)
+      @Html.TextBoxFor(model => model.companyName, new {@class = "input-company"})
+    </div>
     <button type="submit" class="button" asp-controller="user" asp-action="documentPage">Continuar</button>
-  </form>
+  }
 </body>
 </html>

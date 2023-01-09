@@ -1,3 +1,4 @@
+@model User;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,10 @@
         d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
     </svg>
   </a>
-  <h1 class="nameTextPass">Nos informe sua localização.</h1>
-    @Html.TextBox("cep", null, new {placeholder = "CEP", @class = "cepBox", id="buscarCep"})
-<form action="" id="login-form">
+  <h1 class="nameTextPass">Para finalizar o cadastro, nos informe sua localização.</h1>
+  @Html.TextBox("cep", null, new {placeholder = "CEP", @class = "cepBox", id="buscarCep"})
+  @using (Html.BeginForm())
+  {
     @Html.TextBox("Estado", null, new {placeholder = "Estado", @class = "input-text-desc"})
 
     @Html.TextBox("Cidade", null, new {placeholder = "Cidade", @class = "input-text-desc"})
@@ -29,7 +31,7 @@
     
     @Html.TextBox("Comp", null, new {placeholder = "Complemento", @class = "input-text-desc"})
 
-    <button type="submit" class="buttonContinuePass">Continuar</button>
-</form>
+    <button type="submit" class="buttonContinuePass">Cadastrar</button>
+  }
 </body>
 </html>

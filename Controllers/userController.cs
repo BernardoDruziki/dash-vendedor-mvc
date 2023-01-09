@@ -12,7 +12,7 @@ using WebApi.Models;
      {
 
         public IActionResult namePage()//View cadastro de nome.
-        {
+        {           
             return View();
         }
 

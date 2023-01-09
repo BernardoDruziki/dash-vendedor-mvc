@@ -1,6 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace dotnet_mvc.Models;
+
+// [NotMapped]
+// public class UserFirstViewModel{
+//     [Display(Name="Nome Completo")]
+//     [Required]
+//     public string Nome { get; set; }
+// }
 [Table("Users")]
 [Serializable]//Permite a serialização.
 public class User{
@@ -13,28 +20,35 @@ public class User{
 //---------------------------------------------------------
     [Column("name")]
     [Required (ErrorMessage = "Name Required")]
+    [Display(Name="Nome Completo")]
     public string name { get; set; }
 //---------------------------------------------------------
     [Column("companyName")] 
     [Required (ErrorMessage = "companyName Required")]
+    [Display(Name ="Seu nome de profissional, marca ou empresa")]
     public string companyName { get; set; }
 //---------------------------------------------------------
     [Column("cpf")]
+    [Display(Name="CPF ou CNPJ")]
     public string? cpf { get; set; }
 //---------------------------------------------------------
     [Column("cnpj")]
+    [Display(Name="CPF ou CNPJ")]
     public string? cnpj { get; set; }
 //---------------------------------------------------------
     [Column("phoneNumber")]
     [Required (ErrorMessage = "phoneNumber Required")]
+    [Display(Name="Número de telefone")]
     public string phoneNumber { get; set; }
 //---------------------------------------------------------
     [Column("email")] 
     [Required (ErrorMessage = "Email Required")]
+    [Display(Name="Seu Email")]
     public string email { get; set; }
 //---------------------------------------------------------
     [Column("password")]
     [Required (ErrorMessage = "Password Required")]
+    [Display(Name="Senha")]
     public string password { get; set; }
 //---------------------------------------------------------
     [Column("cep")]
