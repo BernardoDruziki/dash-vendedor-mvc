@@ -1,4 +1,4 @@
-@model User;
+@model phoneViewModel;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +16,14 @@
     </svg>
   </a>
   <h1 class="nameText">Digite um número de telefone para contato.</h1>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("phonePage","user", FormMethod.Post))
   {
     <div class="input-label-phone">
       @Html.LabelFor(model => model.phoneNumber)
       @Html.TextBoxFor(model => model.phoneNumber, new {@class = "input-text-phone"})
+      @Html.ValidationMessageFor(user => user.phoneNumber)
     </div>
-    <button type="submit" class="button" asp-controller="user" asp-action="emailPage">Continuar</button>
+    <input type="submit" value="Continuar" class="button">
   }
 </body>
 </html>

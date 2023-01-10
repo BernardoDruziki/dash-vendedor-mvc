@@ -1,4 +1,4 @@
-@model User;
+@model nameViewModel; 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +16,14 @@
     </svg>
   </a>
   <h1 class="nameText">Digite seu nome para que possamos te identificar.</h1>
-  @using (Html.BeginForm(FormMethod.Post))
+  @using (Html.BeginForm("namePage","user", FormMethod.Post))
   {
     <div class="input-label">
       @Html.LabelFor(model => model.name)
       @Html.TextBoxFor(model => model.name, new {@class = "input-text"})
       @Html.ValidationMessageFor(user => user.name)
     </div>
-    <button type="submit" class="button" asp-controller="user" asp-action="companyPage">Continuar</button>
-  }
+    <input type="submit" value="Continuar" class="button">
+  } 
 </body>
 </html>

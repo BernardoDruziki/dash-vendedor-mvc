@@ -1,4 +1,4 @@
-@model User;
+@model documnetViewModel;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +16,14 @@
     </svg>
   </a>
   <h1 class="nameText">Informe um cpf ou cnpj que gostaria de usar.</h1>
-      @using (Html.BeginForm())
+      @using (Html.BeginForm("documentPage","user", FormMethod.Post))
   {
     <div class="input-label-document">
       @Html.LabelFor(model => model.cpf)
       @Html.TextBoxFor(model => model.cpf, new {@class = "input-document"})
+      @Html.ValidationMessageFor(user => user.cpf)
     </div>
-    <button type="submit" class="button" asp-controller="user" asp-action="phonePage">Continuar</button>
+    <input type="submit" value="Continuar" class="button">
   }
 </body>
 </html>

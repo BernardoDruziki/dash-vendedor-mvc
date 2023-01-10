@@ -1,4 +1,4 @@
-@model User;
+@model cepViewModel;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
   </a>
   <h1 class="nameTextPass">Para finalizar o cadastro, nos informe sua localização.</h1>
   @Html.TextBox("cep", null, new {placeholder = "CEP", @class = "cepBox", id="buscarCep"})
-  @using (Html.BeginForm())
+  @using (Html.BeginForm("cepPage","user", FormMethod.Post))
   {
     @Html.TextBox("Estado", null, new {placeholder = "Estado", @class = "input-text-desc"})
 
@@ -31,7 +31,7 @@
     
     @Html.TextBox("Comp", null, new {placeholder = "Complemento", @class = "input-text-desc"})
 
-    <button type="submit" class="buttonContinuePass">Cadastrar</button>
+    <input type="submit" value="Continuar" class="button">
   }
 </body>
 </html>

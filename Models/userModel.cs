@@ -2,6 +2,81 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace dotnet_mvc.Models;
 
+[NotMapped]
+public class nameViewModel
+{
+    [Display(Name="Nome Completo")]
+    [Required (ErrorMessage = "Campo obrigatório.")]
+    public string name { get; set; }
+}
+//--------------------------------------------------------------------------------------------------------
+[NotMapped]
+public class companyViewModel
+{ 
+    [Display(Name ="Seu nome de profissional, marca ou empresa")]
+    [Required (ErrorMessage = "Campo obrigatório.")]
+    public string companyName { get; set; }
+}
+//--------------------------------------------------------------------------------------------------------
+[NotMapped]
+public class documnetViewModel
+{ 
+    [Display(Name="CPF ou CNPJ")] 
+    [Required(ErrorMessage = "Campo obrigatório.")]
+    public string? cpf { get; set; }
+
+    [Display(Name="CPF ou CNPJ")]
+    public string? cnpj { get; set; }
+}
+//--------------------------------------------------------------------------------------------------------
+[NotMapped]
+public class phoneViewModel
+{ 
+    [Required (ErrorMessage = "Campo obrigatório.")]
+    [Display(Name="Número de telefone")]
+    public string phoneNumber { get; set; }
+}
+//--------------------------------------------------------------------------------------------------------
+[NotMapped]
+public class emailViewModel
+{       
+    [Required (ErrorMessage = "Campo obrigatório.")]
+    [Display(Name="Email")]
+    public string email { get; set; }
+}
+//--------------------------------------------------------------------------------------------------------
+[NotMapped]
+public class passwordViewModel
+{       
+    [Required (ErrorMessage = "Campo obrigatório.")]
+    [Display(Name="Senha")]
+    public string password { get; set; }
+}
+//--------------------------------------------------------------------------------------------------------
+[NotMapped]
+public class cepViewModel
+{       
+    [Required (ErrorMessage = "cep Required")]
+    public string cep { get; set; }
+
+    [Column("uf")]
+    [Required (ErrorMessage = "uf Required")]
+    public string uf { get; set; }
+
+    [Column("city")]
+    [Required (ErrorMessage = "City Required")]
+    public string city { get; set; }
+    [Column("district")]
+    [Required (ErrorMessage = "District Required")]
+    public string district { get; set; }
+    [Column("street")]
+    [Required (ErrorMessage = "Street Required")]
+    public string street { get; set; }
+    [Column("number")]
+    [Required (ErrorMessage = "Number Required")]
+    public string number { get; set; }
+}
+
 [Table("Users")]
 [Serializable]//Permite a serialização.
 public class User{
@@ -23,7 +98,7 @@ public class User{
     public string companyName { get; set; }
 //---------------------------------------------------------
     [Column("cpf")]
-    [Display(Name="CPF ou CNPJ")]
+    [Display(Name="CPF ou CNPJ")] 
     public string? cpf { get; set; }
 //---------------------------------------------------------
     [Column("cnpj")]
@@ -37,7 +112,7 @@ public class User{
 //---------------------------------------------------------
     [Column("email")] 
     [Required (ErrorMessage = "Email Required")]
-    [Display(Name="Seu Email")]
+    [Display(Name="Email")]
     public string email { get; set; }
 //---------------------------------------------------------
     [Column("password")]

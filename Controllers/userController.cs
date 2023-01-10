@@ -11,80 +11,149 @@ using WebApi.Models;
  {
      public class userController : Controller
      {
-
         public IActionResult namePage()//View cadastro de nome.
-        {           
-            return View();
-        }
-
-        public IActionResult companyPage()//View cadastro do nome da empresa.
-        {
-            return View();
-        }
-
-        public IActionResult documentPage()//View cadastro do documento.
-        {
-            return View();
-        }
-
-        public IActionResult phonePage()//View cadastro do telefone.
-        {
-            return View();
-        }
-        public IActionResult emailPage()//View cadastro do email.
-        {
-            return View();
-        }
-         public IActionResult passwordPage()//View cadastro da senha.
-        {
-            return View();
-        }
-        public IActionResult cepPage()//View cadastro do enfereço.
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> namePage(string name, [Bind("name")] User user)
+        public async Task<IActionResult> namePage([Bind("name")] nameViewModel user)
         {
-            if (name != user.name)
-            {
-                return NotFound();
-            }
-
+            using (var pgsql = new npgsqlCon())
             if (ModelState.IsValid)
             {
-                using (var pgsql = new npgsqlCon())//Utilizar o banco de dados.
-                try
-                {
-                    user.uuId = Guid.NewGuid().ToString(user.uuId);//Gera o uuId do usuário.
-                    pgsql.Add(user);
-                    await pgsql.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserExists(user.name))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                //user.uuId = Guid.NewGuid().ToString(user.uuId);
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
                 return RedirectToAction(nameof(companyPage));
             }
             return View(user);
         }
-
-          private bool UserExists(string name)
+//--------------------------------------------------------------------------------------------------------
+        public IActionResult companyPage()//View cadastro do nome da empresa.
         {
-          using (var pgsql = new npgsqlCon())
-          return pgsql.Users.Any(e => e.name == name);
+            return View();
         }
-    }
-}
 
+        [HttpPost]
+        public async Task<IActionResult> companyPage([Bind("companyName")] companyViewModel user)
+        {
+            using (var pgsql = new npgsqlCon())
+            if (ModelState.IsValid)
+            {
+                //user = pgsql.FindAsync(userId);
+                //user.companyName = "nome da empresa";
+                //pgsql.(user);pgsql.modify
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(documentPage));
+            }
+            return View(user);
+        }
+//--------------------------------------------------------------------------------------------------------
+        public IActionResult documentPage()//View cadastro do documento.
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> documentPage([Bind("cpf, cnpj")] documnetViewModel user)
+        {
+            using (var pgsql = new npgsqlCon())
+            if (ModelState.IsValid)
+            {
+                //user = pgsql.FindAsync(userId);
+                //user.companyName = "nome da empresa";
+                //pgsql.(user);pgsql.modify
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(phonePage));
+            }
+            return View(user);
+        }
+//--------------------------------------------------------------------------------------------------------
+        public IActionResult phonePage()//View cadastro do telefone.
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> phonePage([Bind("phoneNumber")] phoneViewModel user)
+        {
+            using (var pgsql = new npgsqlCon())
+            if (ModelState.IsValid)
+            {
+                //user = pgsql.FindAsync(userId);
+                //user.companyName = "nome da empresa";
+                //pgsql.(user);pgsql.modify
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(emailPage));
+            }
+            return View(user);
+        }
+//--------------------------------------------------------------------------------------------------------
+        public IActionResult emailPage()//View cadastro do email.
+        {
+            return View();
+        }
+        [HttpPost]
+            public async Task<IActionResult> emailPage([Bind("email")] emailViewModel user)
+        {
+            using (var pgsql = new npgsqlCon())
+            if (ModelState.IsValid)
+            {
+                //user = pgsql.FindAsync(userId);
+                //user.companyName = "nome da empresa";
+                //pgsql.(user);pgsql.modify
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(passwordPage));
+            }
+            return View(user);
+        }
+//--------------------------------------------------------------------------------------------------------
+
+         public IActionResult passwordPage()//View cadastro da senha.
+        {
+            return View();
+        }
+            [HttpPost]
+            public async Task<IActionResult> passwordPage([Bind("password")] passwordViewModel user)
+        {
+            using (var pgsql = new npgsqlCon())
+            if (ModelState.IsValid)
+            {
+                //user = pgsql.FindAsync(userId);
+                //user.companyName = "nome da empresa";
+                //pgsql.(user);pgsql.modify
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(cepPage));
+            }
+            return View(user);
+        }
+//--------------------------------------------------------------------------------------------------------
+        public IActionResult cepPage()//View cadastro do enfereço.
+        {
+            return View();
+        }
+                   [HttpPost]
+            public async Task<IActionResult> cepPage([Bind("cep, state, city, district, street, number, complement")] cepViewModel user)
+        {
+            using (var pgsql = new npgsqlCon())
+            if (ModelState.IsValid)
+            {
+                //user = pgsql.FindAsync(userId);
+                //user.companyName = "nome da empresa";
+                //pgsql.(user);pgsql.modify
+                //pgsql.Add(user);
+                //await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(cepPage));
+            }
+            return View(user);
+        }
+     }
+ }
         //SALVAR USUÁRIO 
         // [HttpPost]
         // public static async Task<string> SaveUser([FromBody]User user)

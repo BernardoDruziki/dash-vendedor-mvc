@@ -1,4 +1,4 @@
-@model User;
+@model emailViewModel;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +16,14 @@
     </svg>
   </a>
   <h1 class="nameTextEmail">Digite um email para acessar sua conta.</h1>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("emailPage","user", FormMethod.Post))
   {
     <div class="input-label-email">
       @Html.LabelFor(model => model.email)
       @Html.TextBoxFor(model => model.email, new {@class = "input-text-email"})
+      @Html.ValidationMessageFor(user => user.email)
     </div>
-    <button type="submit" class="button" asp-controller="user" asp-action="passwordPage">Continuar</button>
+    <input type="submit" value="Continuar" class="button">
   }
 </body>
 </html>
