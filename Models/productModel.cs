@@ -36,6 +36,7 @@ public class Product
     public string uuId { get; set; }
 //---------------------------------------------------------
     [Column("name")]
+    [Display(Name="Nome do produto")]
     [Required (ErrorMessage = "Name Required")]
     public string name { get; set; }
 //---------------------------------------------------------
@@ -44,10 +45,12 @@ public class Product
     public string category { get; set; }
 //---------------------------------------------------------
     [Column("description")]
+    [Display(Name="Descrição")]
     [Required (ErrorMessage = "Description Required")]
     public string description { get; set; }
 //---------------------------------------------------------
     [Column("price")]
+    [Display(Name="Preço")]
     [Required (ErrorMessage = "Price Required")]
     public double price { get; set; }
 //---------------------------------------------------------

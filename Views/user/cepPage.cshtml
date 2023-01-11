@@ -27,19 +27,19 @@
     @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
 
     @Html.TextBox("Cidade", null, new {placeholder = "Cidade", @class = "input-text-desc"})
-    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+    @Html.ValidationMessageFor(user => user.city, "", new { @class = "error-text"})
 
     @Html.TextBox("Bairro", null, new {placeholder = "Bairro", @class = "input-text-desc"})
-    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+    @Html.ValidationMessageFor(user => user.district, "", new { @class = "error-text"})
 
     @Html.TextBox("Rua", null, new {placeholder = "Rua", @class = "input-text-desc"})
-    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+    @Html.ValidationMessageFor(user => user.street, "", new { @class = "error-text"})
 
     @Html.TextBox("Num", null, new {placeholder = "Número da residência", @class = "input-text-desc"})
-    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+    @Html.ValidationMessageFor(user => user.number, "", new { @class = "error-text"})
     
     @Html.TextBox("Comp", null, new {placeholder = "Complemento", @class = "input-text-desc"})
-    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+    @Html.ValidationMessageFor(user => user.complement, "", new { @class = "error-text"})
     </div>
     <input type="submit" value="Continuar" class="button">
   }
