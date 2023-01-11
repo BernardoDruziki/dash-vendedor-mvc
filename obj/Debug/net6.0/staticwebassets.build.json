@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lX0H/uAmivcGa0XV4446/atoJYXUNdPMuBME9EFZVb4=",
+  "Hash": "ubdOhiQv8arMLMOIN3+xKyX+WmGrhuaNtbKRenfz65E=",
   "Source": "dotnet-mvc",
   "BasePath": "_content/dotnet-mvc",
   "Mode": "Default",
@@ -797,6 +797,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\dotnet-mvc.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\wwwroot\\css\\product.css",
+      "SourceId": "dotnet-mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\wwwroot\\",
+      "BasePath": "_content/dotnet-mvc",
+      "RelativePath": "css/product.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\product.css"
     },
     {
       "Identity": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\wwwroot\\css\\register.css",

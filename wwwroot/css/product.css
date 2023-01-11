@@ -1,0 +1,81 @@
+.produtos-text{
+    position: absolute;
+    width: 84px;
+    height: 33px;
+    left: 70px;
+    top: 27px;
+    font-family: 'Baloo';
+    font-size: 25px;
+    display: block;
+}
+.button {
+    font-family: 'Baloo';
+    background-color: #67D4B1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 259px;
+    height: 48px;
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+  }
+
+  .icon-container {
+    position: relative;
+  }
+  
+  .arrowButton {
+    color: black;
+    position: absolute;
+    top: 31px;
+    left: 0;
+  }
+  
+  .arrowButton:hover{
+    color: black;
+  }
+
+  .arrowButton-Register{
+    color: black;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+  .arrowButton-Register:hover{
+    color: black;
+  }
+
+  .icon-container {
+    position: relative;
+  }
+  
+
+  .text{
+    display: grid;
+    place-items: center;
+    font-family: 'Baloo';
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 112px;
+    height: 111px;
+    margin: auto;
+    text-align: center;
+    background: rgba(103, 212, 177, 0.3);
+    border-radius: 9px;
+  }
+  
+  .bi-camera{
+    align-items: center;
+    margin-top: 10px;
+}

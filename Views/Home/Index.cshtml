@@ -31,7 +31,8 @@
           </a>
         </div>
         <p><a href="cadastro" class="textPass">Esqueceu a senha?</a></p>
-        <button type="submit" class="button">Entrar</button>
+        <input type="submit" value="Entrar" class="button">
+        @Html.ActionLink("Produtos", "homePage", "product", null, new {@class = "button"})
         <p class="text">Não possuí uma conta?@Html.ActionLink("Cadastrar", "namePage", "user", null, new {@class =
         "text2"})</p>
       }

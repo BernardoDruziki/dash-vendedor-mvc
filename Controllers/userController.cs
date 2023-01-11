@@ -137,7 +137,12 @@ using WebApi.Models;
         {
             return View();
         }
-                   [HttpPost]
+        public IActionResult homePage()
+        {
+            return View();
+        }
+
+            [HttpPost]
             public async Task<IActionResult> cepPage([Bind("cep, state, city, district, street, number, complement")] cepViewModel user)
         {
             using (var pgsql = new npgsqlCon())
@@ -149,7 +154,9 @@ using WebApi.Models;
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
                 HttpContext.Session.SetString("cep", user.cep);
-                return RedirectToAction(nameof(cepPage));
+                HttpContext.Session.GetString("name");
+                await pgsql.SaveChangesAsync();
+                return RedirectToAction(nameof(homePage));
             }
             return View(user);
         }

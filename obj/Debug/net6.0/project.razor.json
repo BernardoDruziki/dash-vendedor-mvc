@@ -16298,6 +16298,11 @@
   "RootNamespace": "dotnet_mvc",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\Views\\product\\homePage.cshtml",
+      "TargetPath": "Views\\product\\homePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\Views\\user\\emailPage.cshtml",
       "TargetPath": "Views\\user\\emailPage.cshtml",
       "FileKind": "mvc"
@@ -16335,6 +16340,11 @@
     {
       "FilePath": "c:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\Views\\product\\registerProductPage.cshtml",
+      "TargetPath": "Views\\product\\registerProductPage.cshtml",
       "FileKind": "mvc"
     },
     {

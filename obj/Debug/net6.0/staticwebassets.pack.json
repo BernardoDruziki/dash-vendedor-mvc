@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\Images\\flor.png"
     },
     {
+      "Id": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\wwwroot\\css\\product.css",
+      "PackagePath": "staticwebassets\\css\\product.css"
+    },
+    {
       "Id": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\wwwroot\\css\\register.css",
       "PackagePath": "staticwebassets\\css\\register.css"
     },
