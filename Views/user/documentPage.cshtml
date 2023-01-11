@@ -21,7 +21,7 @@
     <div class="input-label-document">
       @Html.LabelFor(model => model.cpf)
       @Html.TextBoxFor(model => model.cpf, new {@class = "input-document"})
-      @Html.ValidationMessageFor(user => user.cpf)
+      @Html.ValidationMessageFor(user => user.cpf, "", new { @class = "error-text"})
     </div>
     <input type="submit" value="Continuar" class="button">
   }

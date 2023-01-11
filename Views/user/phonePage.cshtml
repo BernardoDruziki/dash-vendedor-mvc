@@ -21,7 +21,7 @@
     <div class="input-label-phone">
       @Html.LabelFor(model => model.phoneNumber)
       @Html.TextBoxFor(model => model.phoneNumber, new {@class = "input-text-phone"})
-      @Html.ValidationMessageFor(user => user.phoneNumber)
+      @Html.ValidationMessageFor(user => user.phoneNumber, "", new { @class = "error-text"})
     </div>
     <input type="submit" value="Continuar" class="button">
   }

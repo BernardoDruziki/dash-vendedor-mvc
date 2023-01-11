@@ -16,21 +16,31 @@
     </svg>
   </a>
   <h1 class="nameTextPass">Para finalizar o cadastro, nos informe sua localização.</h1>
+  <div class="input-label-pass">
   @Html.TextBox("cep", null, new {placeholder = "CEP", @class = "cepBox", id="buscarCep"})
+  @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+  </div>
   @using (Html.BeginForm("cepPage","user", FormMethod.Post))
   {
+    <div class="input-label-pass">
     @Html.TextBox("Estado", null, new {placeholder = "Estado", @class = "input-text-desc"})
+    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
 
     @Html.TextBox("Cidade", null, new {placeholder = "Cidade", @class = "input-text-desc"})
+    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
 
     @Html.TextBox("Bairro", null, new {placeholder = "Bairro", @class = "input-text-desc"})
+    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
 
     @Html.TextBox("Rua", null, new {placeholder = "Rua", @class = "input-text-desc"})
+    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
 
     @Html.TextBox("Num", null, new {placeholder = "Número da residência", @class = "input-text-desc"})
+    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
     
     @Html.TextBox("Comp", null, new {placeholder = "Complemento", @class = "input-text-desc"})
-
+    @Html.ValidationMessageFor(user => user.uf, "", new { @class = "error-text"})
+    </div>
     <input type="submit" value="Continuar" class="button">
   }
 </body>

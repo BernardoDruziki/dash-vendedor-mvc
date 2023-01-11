@@ -21,7 +21,7 @@
     <div class="input-label-email">
       @Html.LabelFor(model => model.email)
       @Html.TextBoxFor(model => model.email, new {@class = "input-text-email"})
-      @Html.ValidationMessageFor(user => user.email)
+      @Html.ValidationMessageFor(user => user.email, "", new { @class = "error-text"})
     </div>
     <input type="submit" value="Continuar" class="button">
   }

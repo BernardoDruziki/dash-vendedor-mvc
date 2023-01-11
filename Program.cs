@@ -20,6 +20,8 @@ builder.Services.AddCors(options =>
                       });
 });  
 
+builder.Services.AddSession();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -31,6 +33,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSwagger();
+app.UseSession();
 
 app.UseRouting();
 

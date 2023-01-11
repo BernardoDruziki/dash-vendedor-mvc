@@ -22,9 +22,8 @@ using WebApi.Models;
             using (var pgsql = new npgsqlCon())
             if (ModelState.IsValid)
             {
-                //user.uuId = Guid.NewGuid().ToString(user.uuId);
-                //pgsql.Add(user);
-                //await pgsql.SaveChangesAsync();
+                user.uuId = Guid.NewGuid().ToString(user.uuId);
+                HttpContext.Session.SetString("name", user.name);
                 return RedirectToAction(nameof(companyPage));
             }
             return View(user);
@@ -41,11 +40,7 @@ using WebApi.Models;
             using (var pgsql = new npgsqlCon())
             if (ModelState.IsValid)
             {
-                //user = pgsql.FindAsync(userId);
-                //user.companyName = "nome da empresa";
-                //pgsql.(user);pgsql.modify
-                //pgsql.Add(user);
-                //await pgsql.SaveChangesAsync();
+                HttpContext.Session.SetString("companyName", user.companyName);
                 return RedirectToAction(nameof(documentPage));
             }
             return View(user);
@@ -67,6 +62,7 @@ using WebApi.Models;
                 //pgsql.(user);pgsql.modify
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
+                HttpContext.Session.SetString("cpf", user.cpf);
                 return RedirectToAction(nameof(phonePage));
             }
             return View(user);
@@ -87,6 +83,7 @@ using WebApi.Models;
                 //pgsql.(user);pgsql.modify
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
+                HttpContext.Session.SetString("phoneNumber", user.phoneNumber);
                 return RedirectToAction(nameof(emailPage));
             }
             return View(user);
@@ -107,6 +104,7 @@ using WebApi.Models;
                 //pgsql.(user);pgsql.modify
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
+                HttpContext.Session.SetString("email", user.email);
                 return RedirectToAction(nameof(passwordPage));
             }
             return View(user);
@@ -128,7 +126,9 @@ using WebApi.Models;
                 //pgsql.(user);pgsql.modify
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
-                return RedirectToAction(nameof(cepPage));
+                user.password = BCrypt.Net.BCrypt.HashPassword(user.password);//Encripta a senha do usuário.
+                HttpContext.Session.SetString("password", user.password);
+                return RedirectToAction(nameof(cepPage));            
             }
             return View(user);
         }
@@ -148,12 +148,15 @@ using WebApi.Models;
                 //pgsql.(user);pgsql.modify
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
+                HttpContext.Session.SetString("cep", user.cep);
                 return RedirectToAction(nameof(cepPage));
             }
             return View(user);
         }
      }
  }
+ //--------------------------------------------------------------------------------------------------------
+
         //SALVAR USUÁRIO 
         // [HttpPost]
         // public static async Task<string> SaveUser([FromBody]User user)

@@ -21,9 +21,9 @@
     <div class="input-label">
       @Html.LabelFor(model => model.name)
       @Html.TextBoxFor(model => model.name, new {@class = "input-text"})
-      @Html.ValidationMessageFor(user => user.name)
+      @Html.ValidationMessageFor(user => user.name, "", new { @class = "error-text"})
     </div>
     <input type="submit" value="Continuar" class="button">
-  } 
+  }
 </body>
 </html>

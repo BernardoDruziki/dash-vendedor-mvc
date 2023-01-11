@@ -26,6 +26,16 @@ body {
     width: 500px;
   }
 
+  .error-text{
+    margin: 0 auto;
+    font-family: 'Baloo';
+    display: block;
+    color: #333333;
+    font-size: 15px;
+    margin-top: 10px;
+    align-items: center;
+  }
+
   .input-text {
     color: #333333;
     margin: 0 auto;
