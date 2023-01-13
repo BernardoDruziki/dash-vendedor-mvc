@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GD5cJmaLqfzqmJg716amHukPX5Cj+/KTrYI7FvL0ZFPxEDihg+JS+sBPnICPqh2R36DqW52Uk1wL8bz7nkv4qg==",
+  "dgSpecHash": "0rH7fH4u4KCCVmy/EsQ9BcPtnxXwKqsVFBmPiCD4vNASEbeh2Fye8Y1kUwd4+o4R2ukzvD2/oFfu+fhlsz809w==",
   "success": true,
   "projectFilePath": "C:\\Users\\BernardoMiróDruziki\\Desktop\\dotnet-mvc\\dotnet-mvc.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\bootstrap\\5.3.0-alpha1\\bootstrap.5.3.0-alpha1.nupkg.sha512",
     "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.1\\microsoft.entityframeworkcore.7.0.1.nupkg.sha512",
     "C:\\Users\\BernardoMiróDruziki\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.1\\microsoft.entityframeworkcore.abstractions.7.0.1.nupkg.sha512",

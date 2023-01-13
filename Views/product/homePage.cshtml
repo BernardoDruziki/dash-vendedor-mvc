@@ -22,8 +22,9 @@
     <p class="produtos-text">Produtos</p>
   </div>
     @using (Html.BeginForm("homePage","product", FormMethod.Post))
-    { 
-       <input type="submit" value="Novo produto" class="button">
+    {
+      <input type="submit" value="Novo produto" class="button">
     }
+    @* @await Component.InvokeAsync("Default", Model); *@
 </body>
 </html> 

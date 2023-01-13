@@ -36,6 +36,7 @@ public class phoneViewModel
 {
     [Required (ErrorMessage = "Campo obrigatório.")]
     [Display(Name="Número de telefone")]
+    [DataType(DataType.PhoneNumber)]
     public string phoneNumber { get; set; }
 }
 //--------------------------------------------------------------------------------------------------------
@@ -44,6 +45,7 @@ public class emailViewModel
 {
     [Required (ErrorMessage = "Campo obrigatório.")]
     [Display(Name="Email")]
+    [DataType(DataType.EmailAddress)]
     public string email { get; set; }
 }
 //--------------------------------------------------------------------------------------------------------
@@ -72,10 +74,8 @@ public class cepViewModel
 
     [Required (ErrorMessage = "Campo obrigatório.")]
     public string street { get; set; }
-
-    [Required (ErrorMessage = "Campo obrigatório.")]
-    public string number { get; set; }
-    public string complement { get; set; }    
+    public string? number { get; set; }
+    public string? complement { get; set; }    
 }
 
 [Table("Users")]

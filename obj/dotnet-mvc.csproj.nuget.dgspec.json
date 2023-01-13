@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[11.4.0, )"
             },
+            "FontAwesome": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.1, )"

@@ -374,5 +374,6 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\BernardoMiróDruziki\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">C:\Users\BernardoMiróDruziki\.nuget\packages\fontawesome\4.7.0</PkgFontAwesome>
   </PropertyGroup>
 </Project>

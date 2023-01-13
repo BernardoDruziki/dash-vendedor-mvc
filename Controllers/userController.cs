@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
-using Validator;
 using WebApi.Models;
 
  namespace dotnet_mvc.Controllers
@@ -45,7 +44,7 @@ using WebApi.Models;
             }
             return View(user);
         }
-//--------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------
         public IActionResult documentPage()//View cadastro do documento.
         {
             return View();
@@ -154,7 +153,6 @@ using WebApi.Models;
                 //pgsql.Add(user);
                 //await pgsql.SaveChangesAsync();
                 HttpContext.Session.SetString("cep", user.cep);
-                HttpContext.Session.GetString("name");
                 await pgsql.SaveChangesAsync();
                 return RedirectToAction(nameof(homePage));
             }

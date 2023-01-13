@@ -72,11 +72,17 @@
       @Html.LabelFor(model => model.price)
       @Html.TextBoxFor(model => model.price, new {@class = "input-text"})
       @Html.ValidationMessageFor(user => user.price, "", new { @class = "error-text"})
-    </div>
+    </div> 
+<div class="sw-class">
     <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
+        <input type="checkbox">
+        <span class="slider round"></span>
     </label>
+</div>
+    @using (Html.BeginForm("registerProductPage","product", FormMethod.Post))
+    {
+      <input type="submit" value="Cadastrar produto" class="button">
+    }
 </body>
 </html>
  

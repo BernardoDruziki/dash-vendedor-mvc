@@ -21,6 +21,7 @@ builder.Services.AddCors(options =>
 });  
 
 builder.Services.AddSession();
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -34,6 +35,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSwagger();
 app.UseSession();
+app.MapRazorPages();
 
 app.UseRouting();
 
